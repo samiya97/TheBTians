@@ -1,4 +1,6 @@
+using CareProWeb.Core.Interfaces;
 using CareProWeb.Hubs;
+using CareProWeb.Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +15,13 @@ builder.Services.AddSession(options =>
 });
 builder.Services.AddSignalR();
 
+builder.Services.AddTransient<IDoctorRepository, DoctorRepository>();
+builder.Services.AddTransient<IPatientRepository, PatientRepository>();
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+
 var app = builder.Build();
 
+app.UseSession();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
