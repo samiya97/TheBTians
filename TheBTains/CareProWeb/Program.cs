@@ -15,28 +15,36 @@ builder.Services.AddSession(options =>
 });
 builder.Services.AddSignalR();
 
+builder.Services.AddTransient<ILoginRepository, LoginRepository>();
 builder.Services.AddTransient<IDoctorRepository, DoctorRepository>();
 builder.Services.AddTransient<IPatientRepository, PatientRepository>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "TodoApi", Version = "v1" });
+});
 var app = builder.Build();
 
 app.UseSession();
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
+//if (!app.Environment.IsDevelopment())
+//{
     app.UseExceptionHandler("/Home/Error");
-}
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApi v1"));
+//}
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllers();
 
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "api/{controller=Home}/{action=Index}/{id?}");
 //app.MapRazorPages();
 app.MapHub<NotificationHub>("/notification");
 

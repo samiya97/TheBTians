@@ -2,11 +2,9 @@
 
 namespace CareProWeb.Controllers
 {
-    public class DoctorController : Controller
+    [Route("api/[controller]/[action]")]
+    [ApiController]
+    public class DoctorController : ControllerBase
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
     }
 }

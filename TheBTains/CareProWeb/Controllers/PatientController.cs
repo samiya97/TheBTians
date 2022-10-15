@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CareProWeb.Controllers
 {
-    public class PatientController : Controller
+    [Route("api/[controller]/[action]")]
+    [ApiController]
+    public class PatientController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -11,25 +13,23 @@ namespace CareProWeb.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+        [HttpGet]
         public async Task<JsonResult> GetAllPatients()
         {
             var patient = await _unitOfWork.Patients.GetAll();
-            return Json(patient);
+            return new JsonResult(patient);
         }
+        [HttpGet("{id}")]
         public async Task<JsonResult> GetPatient(int id)
         {
             var patient = await _unitOfWork.Patients.GetById(id);
-            return Json(patient);
+            return new JsonResult(patient);
         }
         [HttpPost]
         public async Task<JsonResult> AddPatient(int id)
         {
             var patient = await _unitOfWork.Patients.GetById(id);
-            return Json(patient);
+            return new JsonResult(patient);
         }
     }
 }
