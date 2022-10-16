@@ -1,0 +1,12 @@
+C:\passion\TheBTains\Data Access Layer\bin\Debug\net6.0\Data Access Layer.deps.json
+C:\passion\TheBTains\Data Access Layer\bin\Debug\net6.0\Data Access Layer.dll
+C:\passion\TheBTains\Data Access Layer\bin\Debug\net6.0\Data Access Layer.pdb
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\Data Access Layer.csproj.AssemblyReference.cache
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\Data Access Layer.GeneratedMSBuildEditorConfig.editorconfig
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\Data Access Layer.AssemblyInfoInputs.cache
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\Data Access Layer.AssemblyInfo.cs
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\Data Access Layer.csproj.CoreCompileInputs.cache
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\Data Access Layer.dll
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\refint\Data Access Layer.dll
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\Data Access Layer.pdb
+C:\passion\TheBTains\Data Access Layer\obj\Debug\net6.0\ref\Data Access Layer.dll

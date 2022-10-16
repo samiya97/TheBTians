@@ -1,0 +1,7 @@
+C:\passion\TheBTains\CareProWeb\obj\Release\net6.0\win-x86\PubTmp\Out\appsettings.Development.json
+C:\passion\TheBTains\CareProWeb\obj\Release\net6.0\win-x86\PubTmp\Out\appsettings.json
+C:\passion\TheBTains\CareProWeb\obj\Release\net6.0\win-x86\PubTmp\Out\libman.json
+C:\passion\TheBTains\CareProWeb\obj\Release\net6.0\win-x86\PubTmp\Out\CareProWeb.pdb
+C:\passion\TheBTains\CareProWeb\obj\Release\net6.0\win-x86\PubTmp\Out\Microsoft.Data.SqlClient.SNI.dll
+C:\passion\TheBTains\CareProWeb\obj\Release\net6.0\win-x86\PubTmp\Out\sni.dll
+C:\passion\TheBTains\CareProWeb\obj\Release\net6.0\win-x86\PubTmp\Out\CareProWeb.exe
