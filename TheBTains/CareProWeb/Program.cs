@@ -19,7 +19,22 @@ builder.Services.AddTransient<ILoginRepository, LoginRepository>();
 builder.Services.AddTransient<IDoctorRepository, DoctorRepository>();
 builder.Services.AddTransient<IPatientRepository, PatientRepository>();
 builder.Services.AddTransient<IAppointCheckUpRepository, AppointCheckUpRepository>();
-builder.Services.AddTransient<>
+builder.Services.AddTransient<ICheckupScheduleRepository, CheckupScheduleRepository>();
+builder.Services.AddTransient<IComplainSymptomsRepository, ComplainSymptomsRepository>();
+builder.Services.AddTransient<IDoctorDetailsRepository, DoctorDetailsRepository>();
+builder.Services.AddTransient<IDoctorNotificationRepository, DoctorNotificationRepository>();
+builder.Services.AddTransient<IDoctorPatientsRepository, DoctorPatientsRepository>();
+builder.Services.AddTransient<IDoctorReviewsRepository, DoctorReviewsRepository>();
+builder.Services.AddTransient<IDoctorsPrescriptionRepository, DoctorsPrescriptionRepository>();
+builder.Services.AddTransient<IHospitalsRepository, HospitalsRepository>();
+builder.Services.AddTransient<ILabTestCategoryRepository, LabTestCategoryRepository>();
+builder.Services.AddTransient<INotificationTypeRepository, NotificationTypeRepository>();
+builder.Services.AddTransient<IPatientDetailsRepository, PatientDetailsRepository>();
+builder.Services.AddTransient<IPatientNotificationRepository, PatientNotificationRepository>();
+builder.Services.AddTransient<IPDailyMedRepository, PDailyMedRepository>();
+builder.Services.AddTransient<IPLabTestAppointmentRepository, PLabTestAppointmentRepository>();
+builder.Services.AddTransient<ISignUpRepository, SignUpRepository>();
+
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddSwaggerGen(c =>

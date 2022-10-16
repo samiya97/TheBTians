@@ -16,7 +16,7 @@ namespace CareProWeb.Infrastructure.Repository
 
         public async Task<bool> Add(CheckupSchedule entity)
         {
-            var sql = "INSERT INTO [dbo].[Product] ([Sku], [Name], [Manufacturer],[Price]) VALUES (@Sku, @Name, @Manufacturer, @Price)";
+            var sql = "INSERT INTO [dbo].[patient] (id,name,nic) VALUES (@id,@name,@nic)";
 
             using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
