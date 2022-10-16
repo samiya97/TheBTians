@@ -1,6 +1,6 @@
 ﻿using CareProWeb.Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-
+using CareProWeb.Core.Entities;
 namespace CareProWeb.Controllers
 {
     [Route("api/[controller]/[action]")]
@@ -25,11 +25,23 @@ namespace CareProWeb.Controllers
             var patient = await _unitOfWork.Patients.GetById(id);
             return new JsonResult(patient);
         }
+
         [HttpPost]
-        public async Task<JsonResult> AddPatient(int id)
+        public async Task<JsonResult> SavePatient(Patient patient)
         {
-            var patient = await _unitOfWork.Patients.GetById(id);
-            return new JsonResult(patient);
+            return new JsonResult(await _unitOfWork.Patients.Add(patient));
+        }
+
+        [HttpPut]
+        public async Task<JsonResult> UpdatePatient(Patient patient)
+        {
+            return new JsonResult(await _unitOfWork.Patients.Update(patient));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<JsonResult> DeletePatient(int id)
+        {
+            return new JsonResult(await _unitOfWork.Patients.Remove(id));
         }
     }
 }
