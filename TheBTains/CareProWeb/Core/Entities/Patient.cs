@@ -2,13 +2,26 @@
 {
     public class Patient
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
+
         public string Name { get; set; }
-        public string DOB { get; set; }
-        public decimal Height { get; set; }
-       // public prescription Prescription { get; set; }
-        public int DietPlanId { get; set; }
-        public int MyProperty { get; set; }
+
+        public string Gender { get; set; }
+
+        public DateTime? DOB { get; set; }
+
+        public decimal? Phone { get; set; }
+
+        public string Address { get; set; }
+
+        public bool? NotifyFamily { get; set; }
+
+        public bool? Status { get; set; }
+
+        public int? CreatedBy { get; set; }
+
+        public DateTime? CreatedOn { get; set; }
+
     }
     public class Prescription 
     {

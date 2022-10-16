@@ -18,6 +18,7 @@ builder.Services.AddSignalR();
 builder.Services.AddTransient<ILoginRepository, LoginRepository>();
 builder.Services.AddTransient<IDoctorRepository, DoctorRepository>();
 builder.Services.AddTransient<IPatientRepository, PatientRepository>();
+builder.Services.AddTransient<IAppointCheckUpRepository, AppointCheckUpRepository>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddSwaggerGen(c =>
@@ -49,3 +50,5 @@ app.MapControllers();
 app.MapHub<NotificationHub>("/notification");
 
 app.Run();
+
+Console.WriteLine("asdaasd");
