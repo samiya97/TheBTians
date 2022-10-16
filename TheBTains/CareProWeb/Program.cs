@@ -1,4 +1,5 @@
 using CareProWeb.Core.Interfaces;
+using CareProWeb.HostedService;
 using CareProWeb.Hubs;
 using CareProWeb.Infrastructure.Repository;
 
@@ -37,6 +38,7 @@ builder.Services.AddTransient<ISignUpRepository, SignUpRepository>();
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
+builder.Services.AddHostedService<NotificationService>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "TodoApi", Version = "v1" });

@@ -4,17 +4,9 @@ using System.Text.Json;
 
 namespace CareProWeb.Common
 {
-    internal class NotificationService
-    {
-        static void Main(string[] args)
-        {
-            PushNotification _obj = new PushNotification();
-        }
-    }
-
     public class PushNotification
     {
-        public PushNotification()
+        public PushNotification(string medicineName)
         {
             try
             {
@@ -25,12 +17,13 @@ namespace CareProWeb.Common
                 tRequest.ContentType = "application/json";
                 var data = new
                 {
-                    to = "cihgunR-rEVWKoLiicGk7a:APA91bGyiPOFzu1I0_X_p5CzWefThccMbr7-v1XnY3rCmo-8wnhKlg_puV2oXcx8WHvwvn8yh9_ZrD8quoOugd1gVZ6BMuNX5UlKEavfrmj5ukdNFI3HP-6vTgCTFdA7ElJGfTKtyQcz",
+                    //to = "cihgunR-rEVWKoLiicGk7a:APA91bGyiPOFzu1I0_X_p5CzWefThccMbr7-v1XnY3rCmo-8wnhKlg_puV2oXcx8WHvwvn8yh9_ZrD8quoOugd1gVZ6BMuNX5UlKEavfrmj5ukdNFI3HP-6vTgCTFdA7ElJGfTKtyQcz",
+                    to = "cV3-IBcMQyQdf--7xs2EpK:APA91bFwabmDHoYMiS0-0hNzhqhMoayOFyNDFew-XENKIDprA3dV-iDR-ulTihgYM1EjYGywyoqurF0F2AIhHN0CjUzq80SOh3z3ofG_EFH6MV6EjixHVRA_pybHH3pKGq_ZrZPIgewj",
                     notification = new
                     {
-                        body = "Testing Usman",
-                        title = "Testing Message",
-                        subtitle = "SubTitle"
+                        body = medicineName,
+                        title = "Dawai THOOSO",
+                        subtitle = "mar ja"
                     }
                 };
                 var json = JsonSerializer.Serialize(data);

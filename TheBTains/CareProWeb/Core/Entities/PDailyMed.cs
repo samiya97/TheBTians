@@ -14,7 +14,7 @@
 
         public string MedName { get; set; }
 
-        public bool? MedTaken { get; set; }
+        public bool MedTaken { get; set; }
 
         public int? CreatedBy { get; set; }
 

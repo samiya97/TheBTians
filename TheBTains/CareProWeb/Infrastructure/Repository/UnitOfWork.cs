@@ -4,10 +4,11 @@ namespace CareProWeb.Infrastructure.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public UnitOfWork(IPatientRepository patientRepository, IDoctorRepository doctorRepository)
+        public UnitOfWork(IPatientRepository patientRepository, IDoctorRepository doctorRepository, IPDailyMedRepository pDailyMedRepository)
         {
             Patients = patientRepository;
             Doctors = doctorRepository;
+            PDailyMed = pDailyMedRepository;
         }
         public IPatientRepository Patients { get; }
 

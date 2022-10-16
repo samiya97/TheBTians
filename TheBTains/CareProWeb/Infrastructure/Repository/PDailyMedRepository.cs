@@ -19,9 +19,15 @@ namespace CareProWeb.Infrastructure.Repository
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<PDailyMed>> GetAll()
+        public async Task<IEnumerable<PDailyMed>> GetAll()
         {
-            throw new NotImplementedException();
+            var sql = "SELECT * FROM PDailyMed";
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                connection.Open();
+                var result = await connection.QueryAsync<PDailyMed>(sql);
+                return result.ToList();
+            }
         }
 
         public Task<PDailyMed?> GetById(int id)
@@ -34,9 +40,15 @@ namespace CareProWeb.Infrastructure.Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> Update(PDailyMed entity)
+        public async Task<bool> Update(PDailyMed entity)
         {
-            throw new NotImplementedException();
+            var sql = "UPDATE PDailyMed SET MedTaken = @MedTaken";
+using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                connection.Open();
+                await connection.ExecuteAsync(sql, entity);
+                return true;
+            }
         }
     }
 }
