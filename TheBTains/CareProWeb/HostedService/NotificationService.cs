@@ -25,7 +25,7 @@ namespace CareProWeb.HostedService
                 {
                     if (!item.MedTaken)
                     {
-                        var publisher = new PushNotification(item.MedName);
+                        var publisher = new PushNotification(item.MedName, "Dawai THOOSO");
                         item.MedTaken = true;
                         await _unitOfWork.PDailyMed.Update(item);
                     }

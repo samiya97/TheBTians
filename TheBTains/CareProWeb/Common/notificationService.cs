@@ -6,7 +6,7 @@ namespace CareProWeb.Common
 {
     public class PushNotification
     {
-        public PushNotification(string medicineName)
+        public PushNotification(string body, string title)
         {
             try
             {
@@ -21,8 +21,8 @@ namespace CareProWeb.Common
                     to = "cV3-IBcMQyQdf--7xs2EpK:APA91bFwabmDHoYMiS0-0hNzhqhMoayOFyNDFew-XENKIDprA3dV-iDR-ulTihgYM1EjYGywyoqurF0F2AIhHN0CjUzq80SOh3z3ofG_EFH6MV6EjixHVRA_pybHH3pKGq_ZrZPIgewj",
                     notification = new
                     {
-                        body = medicineName,
-                        title = "Dawai THOOSO",
+                        body = body,
+                        title = title,
                         subtitle = "mar ja"
                     }
                 };
